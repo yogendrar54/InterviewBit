@@ -1,0 +1,16 @@
+class Solution:
+    # @param A : list of integers
+    # @param B : list of integers
+    # @return an integer
+    def coverPoints(self, A, B):
+        m = len(A)
+        #print(len(A),len(B))
+        #if len(A)< 2:
+         #   return 0
+        sum = 0
+        i=0
+        while i < m-1:
+            min = max(abs(A[i]-A[i+1]),abs(B[i]-B[i+1]))
+            sum = sum + min
+            i +=1
+        return sum
