@@ -1,0 +1,22 @@
+class Solution:
+    # @param A : list of integers
+    # @return an integer
+    def solve(self, A):
+        #A= list(set(A))
+        A.sort()
+        n =len(A)
+        ma = max(A)
+        c = 0
+        value = 0
+        for i in range(0,n):
+            if A[i] == n - 1 - i:
+                c = 1
+                value = A[i]
+                continue
+            if A[i] == value:
+                c = 0
+                
+        if c==0:
+            return -1
+        else:
+            return 1
